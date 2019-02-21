@@ -166,13 +166,13 @@ public:
 			return false;
 		}
 
-		erase(0x0AE0, 0x800); // client cert
-		erase(0x3AE0, 0x130); // private key
-		erase(0x35E1, 0x006); // deviceId
-		erase(0x36E1, 0x006); // deviceId
-		erase(0x02B0, 0x180); // device cert
-		erase(0x3D70, 0x240); // device cert
-		erase(0x3FC0, 0x240); // device key
+		write(0x0AE0, 0x800); // client cert
+		write(0x3AE0, 0x130); // private key
+		write(0x35E1, 0x006); // deviceId
+		write(0x36E1, 0x006); // deviceId
+		write(0x02B0, 0x180); // device cert
+		write(0x3D70, 0x240); // device cert
+		write(0x3FC0, 0x240); // device key
 		return writeHash();
 	}
 
